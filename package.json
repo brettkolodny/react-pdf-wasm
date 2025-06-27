@@ -1,0 +1,23 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "bundle": "mkdir -p ./build && node ./esbuild.config.js",
+    "build": "mkdir -p ./build && jco componentize ./build/pdf.js --wit wit/pdf.wit --world-name component --out ./build/pdf.wasm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@react-pdf/renderer": "^4.3.0",
+    "react": "^19.1.0"
+  },
+  "devDependencies": {
+    "@bytecodealliance/jco": "^1.11.2",
+    "esbuild": "^0.25.5",
+    "esbuild-plugin-polyfill-node": "^0.3.0"
+  }
+}

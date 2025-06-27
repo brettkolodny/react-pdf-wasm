@@ -1,0 +1,5 @@
+package example:pdf;
+
+world component {
+    export pdf: func() -> string;
+}
