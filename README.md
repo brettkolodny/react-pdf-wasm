@@ -1,5 +1,6 @@
 # react-pdf to WASM
 
+
 - `pnpm install`
-- `pnpm bundle`
-- `pnpm build`
+- `pnpm build:react-pdf`
+- `pnpm build:pdf-kit`
