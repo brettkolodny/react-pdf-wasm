@@ -5,14 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "bundle": "mkdir -p ./build && node ./esbuild.config.js",
-    "build": "mkdir -p ./build && jco componentize ./build/pdf.js --wit wit/pdf.wit --world-name component --out ./build/pdf.wasm"
+    "build:react-pdf": "mkdir -p ./build && node ./react-pdf/build.js && jco componentize ./build/pdf.js --debug-starlingmonkey-build --wit ./react-pdf/component.wit --world-name component --out ./build/pdf.wasm",
+    "build:pdf-kit": "mkdir -p ./build && node ./pdfkit/build.js && jco componentize ./build/pdfkit.js --debug-starlingmonkey-build --wit ./pdfkit/component.wit --world-name component --out ./build/pdfkit.wasm"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@react-pdf/renderer": "^4.3.0",
+    "pdfkit": "^0.17.1",
     "react": "^19.1.0"
   },
   "devDependencies": {

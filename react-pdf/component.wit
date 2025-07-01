@@ -1,0 +1,9 @@
+package example:pdf;
+
+interface pdf {
+    pdf: func() -> string;
+}
+
+world component {
+    export pdf;
+}

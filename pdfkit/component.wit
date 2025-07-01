@@ -1,0 +1,9 @@
+package example:pdfkit;
+
+interface pdfkit {
+    render: func() -> string;
+}
+
+world component {
+    export pdfkit;
+}
