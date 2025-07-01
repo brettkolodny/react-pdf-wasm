@@ -14,7 +14,7 @@ await esbuild.build({
 				"fs": true,
 				"fs/promises": true,
 			}
-			// Options (optional)
 		}),
 	],
+	inject: ["react-pdf/stubs.js"],
 });

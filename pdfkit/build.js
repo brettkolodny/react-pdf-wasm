@@ -10,7 +10,11 @@ await esbuild.build({
 	outfile: "build/pdfkit.js",
 	plugins: [
 		polyfillNode({
-			// Options (optional)
+			polyfills: {
+				"fs": true,
+				"fs/promises": true,
+			}
 		}),
 	],
+	inject: ["pdfkit/stubs.js"],
 });
