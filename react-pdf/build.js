@@ -5,7 +5,7 @@ await esbuild.build({
 	entryPoints: ["react-pdf/index.jsx"],
 	bundle: true,
 	jsx: "automatic",
-	platform: "browser",
+	platform: "node",
 	format: "esm",
 	outfile: "build/pdf.js",
 	plugins: [
